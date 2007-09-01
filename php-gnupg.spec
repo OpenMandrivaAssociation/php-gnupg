@@ -6,7 +6,7 @@
 Summary:	A wrapper around the gpgme library for PHP
 Name:		php-%{modname}
 Version:	1.3.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 Group:		Development/PHP
 License:	BSD
 URL:		http://pecl.php.net/package/gnupg/
@@ -27,15 +27,7 @@ This extension provides methods to interact with gnupg.
 perl -pi -e "s|/lib\b|/%{_lib}|g" config.m4
 
 %build
-export CFLAGS="%{optflags}"
-export CXXFLAGS="%{optflags}"
-export FFLAGS="%{optflags}"
-
-%if %mdkversion >= 200710
-export CFLAGS="$CFLAGS -fstack-protector"
-export CXXFLAGS="$CXXFLAGS -fstack-protector"
-export FFLAGS="$FFLAGS -fstack-protector"
-%endif
+%serverbuild
 
 phpize
 %configure2_5x --with-libdir=%{_lib} \
