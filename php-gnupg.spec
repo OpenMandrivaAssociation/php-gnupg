@@ -29,6 +29,8 @@ perl -pi -e "s|/lib\b|/%{_lib}|g" config.m4
 %build
 %serverbuild
 
+export CFLAGS="$CFLAGS -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+
 phpize
 %configure2_5x --with-libdir=%{_lib} \
     --with-%{modname}=shared,%{_prefix}
