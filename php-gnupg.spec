@@ -5,12 +5,12 @@
 
 Summary:	A wrapper around the gpgme library for PHP
 Name:		php-%{modname}
-Version:	1.3.1
-Release:	%mkrel 17
+Version:	1.3.2
+Release:	%mkrel 1
 Group:		Development/PHP
 License:	BSD
 URL:		http://pecl.php.net/package/gnupg/
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tar.bz2
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	gpgme-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
