@@ -6,7 +6,7 @@
 Summary:	A wrapper around the gpgme library for PHP
 Name:		php-%{modname}
 Version:	1.3.2
-Release:	%mkrel 9
+Release:	%mkrel 10
 Group:		Development/PHP
 License:	BSD
 URL:		http://pecl.php.net/package/gnupg/
