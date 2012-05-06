@@ -11,6 +11,7 @@ Group:		Development/PHP
 License:	BSD
 URL:		http://pecl.php.net/package/gnupg/
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+Patch0:		gnupg-1.3.2-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	gpgme-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -22,6 +23,8 @@ This extension provides methods to interact with gnupg.
 
 %setup -q -n %{modname}-%{version}
 [ "../package*.xml" != "/" ] && mv ../package*.xml .
+
+%patch0 -p1
 
 # lib64 fix
 perl -pi -e "s|/lib\b|/%{_lib}|g" config.m4
