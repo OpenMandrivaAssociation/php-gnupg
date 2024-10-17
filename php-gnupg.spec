@@ -9,7 +9,7 @@ Version:	1.3.2
 Release:	%mkrel 10
 Group:		Development/PHP
 License:	BSD
-URL:		http://pecl.php.net/package/gnupg/
+URL:		https://pecl.php.net/package/gnupg/
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		gnupg-1.3.2-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.0
