@@ -12,6 +12,11 @@ License:	BSD
 URL:		https://pecl.php.net/package/gnupg/
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		gnupg-1.3.2-php54x.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	gpgme-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
